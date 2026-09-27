@@ -321,3 +321,51 @@ C'est l'intersection du solide et de $\mathcal P$ : un polygone dont chaque côt
 - [ ] Comprend la propriété d'ambiguïté du dessin en perspective
 - [ ] Erreurs surtout calculatoires
 - [ ] Erreurs surtout méthodologiques / de justification
+
+
+Bonne approche ! Voici comment la rédiger proprement.
+
+## Principe
+
+Pour montrer que (IK) et (CE) sont non coplanaires, on suppose le contraire : si elles étaient coplanaires (ou parallèles, ou sécantes), alors le vecteur reliant un point de l'une à un point de l'autre serait une **combinaison linéaire** de $\vec{IK}$ et $\vec{CE}$.
+
+On introduit donc un troisième vecteur reliant les deux droites, par exemple $\vec{IC}$ :
+
+$$\vec{IC} = C - I = (1-0{,}5;\ 1-0;\ 0-0) = (0{,}5;\ 1;\ 0)$$
+
+## Hypothèse à tester
+
+On suppose qu'il existe $a, b \in \mathbb{R}$ tels que :
+
+$$\vec{IC} = a\,\vec{IK} + b\,\vec{CE}$$
+
+Ce qui donne le système (coordonnée par coordonnée) :
+
+$$
+\begin{cases}
+0{,}5 = -0{,}5a - b \quad (x)\\
+1 = a - b \quad (y)\\
+0 = 0{,}5a + b \quad (z)
+\end{cases}
+$$
+
+## Résolution
+
+Des équations (y) et (z) :
+- $(z) \Rightarrow b = -0{,}5a$
+- $(y) \Rightarrow a = 1 + b = 1 - 0{,}5a \Rightarrow 1{,}5a = 1 \Rightarrow a = \dfrac{2}{3},\quad b = -\dfrac{1}{3}$
+
+**Vérification dans (x) :**
+$$-0{,}5 \times \dfrac{2}{3} - \left(-\dfrac{1}{3}\right) = -\dfrac{1}{3} + \dfrac{1}{3} = 0 \neq 0{,}5$$
+
+**Contradiction !** Il n'existe donc pas de couple $(a,b)$ vérifiant les trois équations à la fois.
+
+## Conclusion
+
+Le vecteur $\vec{IC}$ ne peut pas s'écrire comme combinaison linéaire de $\vec{IK}$ et $\vec{CE}$. Les trois vecteurs $\vec{IK}$, $\vec{CE}$, $\vec{IC}$ ne sont pas coplanaires.
+
+Donc les droites **(IK) et (CE) sont non coplanaires** (elles sont gauches).
+
+---
+
+💡 **Astuce plus rapide** : au lieu de résoudre le système, tu peux directement calculer le déterminant des trois vecteurs $\vec{IK}, \vec{CE}, \vec{IC}$. S'il est non nul, les vecteurs ne sont pas coplanaires — ça évite de résoudre puis vérifier. Ici on trouve $\det = 0{,}75 \neq 0$, ce qui confirme le résultat. Tu veux que je détaille ce calcul de déterminant aussi ?
